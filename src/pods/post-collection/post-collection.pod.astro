@@ -1,0 +1,10 @@
+---
+import { getAllPost } from './post-collection.api.ts';
+import PostCard from './components/post-card.astro';
+
+const posts = await getAllPost();
+---
+
+<section class="flex flex-1 flex-col gap-9">
+  {posts.map(post => <PostCard post={post} />)}
+</section>
