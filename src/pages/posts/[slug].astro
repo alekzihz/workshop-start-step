@@ -21,7 +21,6 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 ---
 
---- ---
 <Layout title={entry.title}>
   <Hero url={entry.image.url} slot="hero" />
 
