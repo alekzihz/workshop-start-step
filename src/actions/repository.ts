@@ -10,5 +10,6 @@ export const addLike = async (slug: string): Promise<number> => {
   const current = likeStore.get(slug) ?? 0;
   const updated = current + 1;
   likeStore.set(slug, updated);
+  console.log('a');
   return updated;
 };
